@@ -1,0 +1,238 @@
+body{
+    background-color: rgb(218, 199, 176); /* color de fondo de toda la pagina*/
+    margin: 0; /* Quita el margen */
+}
+
+.barraMenu{
+    background-color: rgb(37, 43, 48); /* Le da el color a la barra */
+    height: 100px; /* Le damos altura */
+    width: 100%; /* Le damos la anchura */
+    position: fixed; /* Le decimos que la fije en la parte superior de la pagina */
+    top: 0; /* Esto hace que este pegado al borde superior */
+    left: 0; /* left 0 hace que este pegada al borde izquierdo */
+    z-index: 1; /* Hace que no se encime el otro contenido */
+    display: flex; /* Distribuye los elemntod de la banda */
+    align-items: center; /* Alinea los elemnetos en el centro verticalmente */
+    justify-content: center; /* Lo mismo ue items solo que esta vez horizontalmente  */
+}
+
+.navegacion{
+    display: flex; /* Alinea los elementos en una fila */
+    align-items: center; /* Alinea los elemnetos en el centro verticalmente */
+    justify-content: center; /* Lo mismo ue items solo que esta vez horizontalmente  */
+}
+
+.boton{
+    background-color: rgb(37, 43, 48); /* Le da el color al boton */
+    color: aliceblue; /* Le da el color al texto del boton */
+    padding: 8px 15px; /* Esto lo que hace es darle un relleno a las letras para que no esten pequeños */
+    font-size: 20px; /* Tamaño de letra */
+    font-style: italic; /* Estilo de letra */
+    cursor: pointer; /* Diseño del cursor al tocar los botones */
+    text-transform: uppercase; /* Pone texto en mayus */
+    transition: background-color 0.3s ease; /* Transicion suave al cambiar el color */
+    text-decoration: none; /* Para quitar cualquier diseño que tenga el boton */
+}
+
+.menuDesplegable{
+    position: relative; /* Posiciona el menu despelgable respecto a este contenedor */
+}
+
+.links{
+    background-color: rgb(37, 43, 48); /* Le da el color al boton */
+    width: 100%; /* Hce que el menu desplegable tenga el mismo ancho qu el boton conocenos */
+    text-align: center; /* Alinea al centro el texto */
+    display: none; /* ocultamos el menu por defecto */
+    position: absolute; /* posicion absoluta resecto al contenedor */
+    top: 100%; /* Hace que este debajo del boton conocenos */
+    left: 0; /* alinea a la izquierda */
+    margin-top: 5px; /* Espacio entre botones */
+    z-index: 1; /* Hace que no se encime el otro contenido */
+}
+
+.linkDesplegable{
+    color: white; /* Color del texto */
+    display: block; /* Las letras ocupan todo el espacio */
+    font-size: 20px; /* Tamaño de fuente */
+    text-decoration: none; /* Para quitar cualquier diseño que tenga el boton */
+}
+
+.linkDesplegable:hover{
+    background-color: rgb(98, 112, 124); /* Le da el color de fondo al menu cuando se interactua */
+}
+
+.menuDesplegable:hover .links{
+    display: block; /* Muestra el menu cuando el cursor pasa por ahi */
+}
+
+.botonMenu{
+    background-color: rgb(37, 43, 48); /* Le da el color al boton */
+    color: white; /* Color del texto */
+    padding: 8px 15px; /* espacio dentro del area de contenido */
+    font-size: 25px; /* tamaño de letra */
+    font-style: italic; /* estilo de letra */
+    font-weight: bold; /* Texto en negritas */
+    cursor: pointer; /* estilo del cursor */
+    text-transform: uppercase; /* Mayus */
+    transition: background-color 0.3s ease; /* Transicion suave al cambiar el color */
+    text-decoration: none; /* quita diseño del boton */
+}
+
+.imgContenedor{
+    position: relative; /* Establece la posicion de este contenedor para que las imagenes esten en posicion relativa a este */
+    width: 100%; /* Ancho de la imagen */
+    height: 400px; /* Alto edaseado */
+    overflow: hidden; /* Si el contenido excede el tamaño se oculta */
+    margin-top: 100px; /* apica un margen arriba del contenedor */
+}
+
+.img{
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    display: block; /* Hace que la imagen tenga el tamaño correcto */
+}
+
+.descripcion{
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 50%; /* Coloca el texto en el centro vertical de la imagen */
+    left: 50%; /* Coloca el texto en el centro horizontal de la imagen */
+    transform: translate(-50%, -50%); /* Ajusta para que el texto esté perfectamente centrado */
+    color: white; /* Color del texto */
+    font-size: 2em; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado alrededor del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semi-transparente para que el texto sea legible */
+    border-radius: 10px; /* Borde redondeado alrededor del texto */
+}
+
+.titulo{
+    font-size: 3.5em; /* Tamaño grande para el título */
+    font-weight: bold; /* Texto en negrita */
+    color: rgb(37, 43, 48); /* Color del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-style: italic; /* Estilo cursiva */
+}
+
+.textoDescripcion{
+    text-align: center;  /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Reduce el espacio entre la imagen y el texto */
+    padding: 20px; /* Espacio dentro del contenedor de texto */
+    color: rgb(37, 43, 48); /* color de texto */
+}
+
+.breveDescripcion{
+    font-style: italic; /* Estilo en cursiva */
+    margin-bottom: 75px; /* Crea un margen en la apret inferior */
+}
+
+.mapa{
+    margin-bottom: 75px; /* Crea un margen en la apret inferior */
+}
+
+.pieDePagina {
+    display: flex; /* Utiliza Flexbox para alinear los elementos */
+    justify-content: space-around; /* Distribuye espacio entre los elementos */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    background-color: rgb(37, 43, 48); /* Color de fondo */
+    color: white; /* Color del texto */
+    width: 100%; /* Ocupa el ancho completo de la ventana */
+    height: 300px; /* Alto deseado */
+    margin: 0; /* Sin margen */
+    padding: 20px; /* Espaciado interno */
+    font-size: 1.2em; /* tamaño de fuente */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    text-align: center; /* Alinea el texto en el centro */ 
+}
+
+/* Estilos individuales para cada sección */
+.horarios, .datos {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio */
+    padding: 10px; /* Espaciado interno para separar el contenido */
+    white-space: normal; /* Para mannejar los espacios */
+}
+
+.horarios p, .datos p {
+    margin: 5px 0; /* Espacio entre líneas */
+}
+
+.contenidoMC, .contenidoPromociones, .carrusel{
+    margin-top: 100px; /* Asegura que esté debajo de la barra de navegación */
+}
+
+
+.contenedorImagen {
+    display: flex; /* Para que los elementos se puedan mover facilmente */
+    align-items: flex-start; /* Alinea el contenido superior si es necesario */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.imagenIzquierda {
+    width: 250px; /* Ajusta el ancho de la imagen según el diseño */
+    height: 360px; /* Mantiene la proporción de la imagen */
+    margin-left: 10px; /* Para que la imagen no este pegada al borde de la pagina */
+}
+
+.imagenIzquierdaPromo {
+    width: 250px; /* Ajusta el ancho de la imagen según el diseño */
+    height: 423px; /* Mantiene la proporción de la imagen */
+    margin-left: 10px; /* Para que la imagen no este pegada al borde de la pagina */
+}
+
+.textoDerecha {
+    max-width: 600px; /* Controla el ancho máximo del texto */
+}
+
+.menu, .promocion {
+    font-size: 1.5em; /* Tamaño de feunte */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.menu2, .menu4, .menu6, .promocion2, .promocion4, .promocion6{
+    background-color: rgb(37, 43, 48); /* Color de fondo */
+    color: white; /* color de tecto */
+}
+
+.galeria {
+    display: grid; /* Usa grid para hacer una galería de varias columnas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Establece un diseño responsive, 1 columna mínima de 300px */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px; /* Relleno alrededor de la galería */
+    justify-items: center; /* Centra las imágenes dentro de cada celda */
+}
+
+.imagen {
+    position: relative; /* Para posicionar el texto sobre la imagen si es necesario */
+    width: 100%; /* Ancho e la imagen */
+    border-radius: 10px; /* Bordes redondeados para cada imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para las imágenes */
+    transition: transform 0.3s ease; /* Animación suave al hacer hover */
+}
+
+.imagen img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Alto de la imagen */
+    object-fit: cover; /* Recorta la imagen si es necesario para ajustarse al contenedor */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover sobre la imagen */
+}
+
+.imagen:hover {
+    transform: scale(1.05); /* Amplía la imagen al hacer hover */
+}
+
+.imagen:hover img {
+    transform: scale(1.1); /* Aumenta la imagen en el hover para un efecto de zoom */
+}
+
+.imagen p {
+    position: absolute;
+    bottom: 10px; /* Coloca el texto en la parte inferior de la imagen */
+    left: 50%; /* Cooca las imagenes a la izquierda a un 50% */
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    font-size: 1.2em; /* Por si queria agregar texto que al final mejor quite. Tamaño de fuente */
+    color: white; /* Color de fuente */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y semi-transparente para que el texto sea legible */
+    padding: 5px 10px; /* Relleno alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el texto */
+}
